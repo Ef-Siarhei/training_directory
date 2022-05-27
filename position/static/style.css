@@ -1,0 +1,32 @@
+body {
+   background-color: #dddcdc;
+}
+
+form {
+   width: 300px;
+   height: auto;
+   background-color: #ffffff;
+   padding: 40px;
+}
+
+h2 {
+   text-align: center;
+}
+
+.profile_data {
+   width: 100%;
+   padding: 5px;
+}
+
+.checkbox {
+   text-align: right;
+   font-style: italic;
+}
+
+button {
+   width: 100%;
+   color: #ffffff;
+   background-color: #ce7d3a;
+   border: none;
+   padding: 10px;
+}
