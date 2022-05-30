@@ -7,8 +7,31 @@
 h2 {
    text-align: center;
    color: #c4b620;
+   overflow: hidden;
+   font-weight: normal;
 }
 
 p {
    color: #ffffff;
+}
+
+h2::before,
+h2::after {
+   content: "";
+   display: inline-block;
+   vertical-align: middle;
+   width: 100%;
+   height: 1px;
+   background-color: #c4b620;
+   position: relative;
+}
+
+h2::before {
+   margin-left: -100%;
+   right: 15px;
+}
+
+h2::after {
+   margin-right: -100%;
+   left: 15px;
 }
