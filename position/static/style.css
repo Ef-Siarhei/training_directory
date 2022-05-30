@@ -4,11 +4,10 @@ body {
 
 form {
    position: absolute;
-   left: 50%;
-   right: 50%;
    width: 300px;
    background-color: #ffffff;
    padding: 40px;
+   margin-left: 40%;
 }
 
 h2 {
