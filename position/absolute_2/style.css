@@ -1,0 +1,21 @@
+body {
+   background: url(https://webref.ru/assets/files/travolta.jpg) no-repeat;
+   background-size: cover;
+}
+
+.overlay {
+   position: absolute;
+   background: #000000d5;
+   left: 0;
+   right: 0;
+   top: 0;
+   bottom: 0;
+}
+
+.error {
+   position: relative;
+   font-size: 10em;
+   color: #ffffff;
+   text-align: center;
+   top: 400px;
+}
