@@ -1,0 +1,13 @@
+img {
+   position: absolute;
+   left: 50%;
+   top: 50px;
+}
+
+.three_ch {
+   transform: rotate(-20deg);
+}
+
+.t_pick {
+   transform: rotate(20deg);
+}
