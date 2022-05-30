@@ -12,3 +12,7 @@ img {
 .t_pick {
    transform: rotate(20deg);
 }
+
+.img:hover {
+   z-index: 1;
+}
