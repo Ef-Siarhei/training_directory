@@ -1,0 +1,11 @@
+.menu {
+   list-style: none;
+   background: #c0e8f2;
+   width: 150px;
+   padding: 10px;
+   position: fixed;
+   top: 200px;
+   right: 30px;
+
+}
+
