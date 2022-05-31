@@ -1,0 +1,22 @@
+body {
+   overflow: scroll;
+   min-height: 1000px;
+}
+
+.menu {
+   list-style: none;
+   background: #991886;
+   padding: 10px;
+   position: sticky;
+   top: 0;
+}
+
+a {
+   text-decoration: none;
+   color: #ffffff;
+}
+
+ul li {
+   display: inline;
+   margin-left: 15px;
+}
