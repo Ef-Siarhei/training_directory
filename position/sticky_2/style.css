@@ -11,18 +11,37 @@ body {
 .header {
    background: #272727;
    color: #ffffff;
-   padding: 15px;
+   padding: 15px 0;
    font-size: 30px;
    font-family: Arial, Helvetica, sans-serif;
 }
 
-.main {
-   position: relative;
-   top: 10px;
-   margin: auto;
+.header p {
    width: 60%;
+   margin: 0 auto;
+}
+
+.main {
+   width: 60%;
+   position: absolute;
+   top: 80px;
+   left: 0; right: 0;
+   margin: auto;
    min-height: 1000px;
    background: #ffffff;
    padding: 40px 20px;
    box-shadow: 0 0 5px 5px #b8b7b7;
+}
+
+.social_network {
+   position: absolute;
+   top: 10px;
+   left: 10px;
+   display: flex;
+   flex-direction: column;
+}
+
+div {
+   position: sticky;
+   top: 0;
 }
