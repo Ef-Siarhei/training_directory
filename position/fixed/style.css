@@ -1,11 +1,18 @@
+body {
+   min-height: 1000px;
+}
+
 .menu {
-   list-style: none;
    background: #c0e8f2;
    width: 150px;
    padding: 10px;
+   margin: 0;
+   list-style: none;
    position: fixed;
-   top: 200px;
    right: 30px;
-
+   top: 200px;
 }
 
+.menu a {
+   color: #0909eb;
+}
