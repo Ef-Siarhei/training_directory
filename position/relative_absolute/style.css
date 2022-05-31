@@ -1,0 +1,13 @@
+.button {
+   position: absolute;
+   background: rgb(0, 0, 0, 0, 0.5);
+   right: 20px;
+   bottom: 20px;
+   border: 1px solid #000000;
+}
+
+div {
+   position: relative;
+   margin: 50px;
+   width: 800px;
+}
