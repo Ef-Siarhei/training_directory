@@ -25,7 +25,8 @@ body {
    width: 60%;
    position: absolute;
    top: 80px;
-   left: 0; right: 0;
+   left: 0;
+   right: 0;
    margin: auto;
    min-height: 1000px;
    background: #ffffff;
