@@ -252,3 +252,17 @@ whoseBicycle(diary1, diary2, diary3)
 ---------------------!!!!!!!!!!!!!!!!!!*/
 
 
+
+/*----------------------------
+Завершите функцию power_of_two/ powerOfTwo(или эквивалентную, в зависимости от 
+вашего языка), которая определяет, является ли заданное неотрицательное целое число степенью двойки 
+
+isPowerOfTwo = (n) => (n != 0) && ((n & (n - 1)) == 0)  ? true : false;
+
+console.log(isPowerOfTwo(0))
+
+
+function isPowerOfTwo(n){
+    return Number.isInteger(Math.log2(n));
+}
+--------------------------------*/
