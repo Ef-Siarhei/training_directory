@@ -213,6 +213,49 @@ const sortMyString = s => {
 }
 -----------------------------*/
 
+/*----------------------------
+Завершите функцию power_of_two/ powerOfTwo(или эквивалентную, в зависимости от 
+вашего языка), которая определяет, является ли заданное неотрицательное целое число степенью двойки 
+
+isPowerOfTwo = (n) => (n != 0) && ((n & (n - 1)) == 0)  ? true : false;
+
+console.log(isPowerOfTwo(0))
+
+Codewars
+
+function isPowerOfTwo(n){
+    return Number.isInteger(Math.log2(n));
+}
+--------------------------------*/
+
+
+/*--------------------------------
+   Входными данными будет массив словарей.
+
+Возвращает значения в виде предложения, разделенного строками, в порядке 
+целочисленного эквивалента их ключей(в порядке возрастания).
+
+Ключи не повторяются, и их диапазон равен - 999 < key < 999. Ключи и значения 
+словарей всегда будут строками и не будут пустыми.
+
+
+let List = [{ '4': 'dog' }, { '2': 'took' }, { '3': 'his' }, { '-2': 'Vatsan' }, { '5': 'for' }, { '6': 'a' }, { '12': 'spin' }]
+
+function sentence(List) {
+   let list = List.sort((a, b) => Object.keys(a)[0] - Object.keys(b)[0]).map(obj => Object.values(obj)[0]).join(' ')
+   console.log(list)
+}
+sentence(List)
+--------------------------------*/
+
+
+
+
+
+
+
+
+
 
 
 
@@ -253,33 +296,3 @@ whoseBicycle(diary1, diary2, diary3)
 
 
 
-/*----------------------------
-Завершите функцию power_of_two/ powerOfTwo(или эквивалентную, в зависимости от 
-вашего языка), которая определяет, является ли заданное неотрицательное целое число степенью двойки 
-
-isPowerOfTwo = (n) => (n != 0) && ((n & (n - 1)) == 0)  ? true : false;
-
-console.log(isPowerOfTwo(0))
-
-
-function isPowerOfTwo(n){
-    return Number.isInteger(Math.log2(n));
-}
---------------------------------*/
-
-let List = [{ '4': 'dog' }, { '2': 'took' }, { '3': 'his' }, { '-2': 'Vatsan' }, { '5': 'for' }, { '6': 'a' }, { '12': 'spin' }]
-
-function sentence(List) {
-   List.sort((a, b) => Object.keys(a)[0] - Object.keys(b)[0])
-   List.map(obj => Object.values(obj)[0]).join('')
-   console.log(List)
-   /*
-   .sort((a, b) => Object.keys(a)[0] – Object.keys(b)[0])
-
-   .map(obj => Object.values(obj)[0])
-
-   .join(' ')
-   */
-}
-
-sentence(List)
