@@ -213,6 +213,31 @@ const sortMyString = s => {
 }
 -----------------------------*/
 
+
+/*------------------------------------
+Задача
+Ваша задача состоит в том, чтобы выполнить функцию в строке, чтобы суммировать все числа в массиве,
+используя функцию стиля стрелки.
+ПРИМЕЧАНИЕ:
+
+Поскольку eval не догнал и не может оценить функции стиля стрелки, мне приходится делать это вручную. 
+Ваше решение должно содержать функцию в стиле Arrow, фигурные скобки внутри сокращения и оператор return,
+поскольку его необходимо вручную преобразовать в старый стиль функции, чтобы проверить правильность самой
+функции.Ваша функция будет возвращена вам, когда она будет преобразована, если она выйдет из строя(что 
+весьма вероятно), если возникнут какие - либо проблемы, отправьте сообщение в обсуждение и предоставьте 
+свое решение, помеченное как спойлер, спасибо.
+
+var arr = [[1, 2, 3, 4, 5, 6, 7, 8, 9, 10], [71, -548, 12.3, 83, -47, -1.7, -892, 58, 31415, 2718, -38]]
+
+var Sum = (arr) => {return arr.reduce((acc, item) => acc + item);}
+console.log(Sum(arr[0]))
+
+
+var Sum = (arr) => arr.flat().reduce((acc, item) => acc + item);
+console.log(Sum(arr))
+--------------------------------------------*/
+
+
 /*----------------------------
 Завершите функцию power_of_two/ powerOfTwo(или эквивалентную, в зависимости от 
 вашего языка), которая определяет, является ли заданное неотрицательное целое число степенью двойки 
@@ -249,11 +274,45 @@ sentence(List)
 --------------------------------*/
 
 
+/*-------------------------------
+Напишите функцию, которая принимает строку и выводит строки из 1 и 0,
+где гласные становятся 1, а не гласные — 0.
+Должны быть включены все негласные, включая небуквенные символы
+(пробелы, запятые и т.д.).
 
+let s = "123, arou";
+function vowelOne(s) {
+   let vowel = ['a', 'e', 'i', 'o', 'u'];
+   let arr = [];
 
+   for (let i = 0; i < s.length; i++) {
+      if (vowel.indexOf(s.toLowerCase()[i]) !== -1) {
+         arr.push(1)
+      } else {
+         arr.push(0)
+      }
+   }
+   return arr.join('')
+}
 
+console.log(vowelOne(s))
 
+Codewars
 
+function vowelOne(s){
+   return s.split('').map(x => ('aeiouAEIOU'.includes(x)) ? 1 : 0).join('');
+}
+ 
+function vowelOne(s){
+   s = s.toLowerCase()
+   const arr = ['a', 'e', 'i', 'o', 'u']
+   let result = ''
+   for (el of s) {
+     arr.includes(el) ? result += '1' : result += '0'
+   }
+   return result
+ }
+ ---------------------------------*/
 
 
 
@@ -284,8 +343,6 @@ function whoseBicycle(diary1, diary2, diary3) {
    if (d1 = d2 = d3) { console.log('I need to buy a bicycle for my third son.') };
 
 
-
-
    console.log(d1);
    console.log(d2);
    console.log(d3);
@@ -296,3 +353,19 @@ whoseBicycle(diary1, diary2, diary3)
 
 
 
+
+
+
+
+let suspectInfo = { 'James': ['Jacob', 'Bill', 'Lucas'], 'Johnny': ['David', 'Kyle', 'Lucas'], 'Peter': ['Lucy', 'Kyle'] };
+let dead = ['Lucas', 'Bill'];
+
+function killer(suspectInfo, dead) {
+   for (let i = 0; i < suspectInfo[key].length; i++) {
+      dead.map(item => (suspectInfo[key].includes(item)) ? 1 : 0);
+   }
+
+}
+
+
+console.log(killer(suspectInfo, dead))
