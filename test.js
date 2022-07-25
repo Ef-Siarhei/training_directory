@@ -342,78 +342,95 @@ const dataReverse = data => {
 
 
 
-
-
-
-
-
-/*--------!!!!!!!!!!!!!!!!!!!!!!!!!!
-let diary1 = { 'algebra': 1, 'history': 7, 'physics': 8, 'geography': 9, 'chemistry': 10 };
-let diary2 = { 'algebra': 2, 'history': 7, 'physics': 8, 'geography': 9, 'chemistry': 10 };
-let diary3 = { 'algebra': 3, 'history': 7, 'physics': 8, 'geography': 9, 'chemistry': 10 };
-
-const ageTable = { 'firstSonAge': 14, 'secondSonAge': 9, 'thirdSonAge': 8 };
-
-function whoseBicycle(diary1, diary2, diary3) {
-   let sumD = whoseBicycle.map(item => Object.values(item).reduce((a, b) => a + b));
-   console.log(sumD);
-   /*
-   d1 = sumD(diary1);
-   d2 = sumD(diary2);
-   d3 = sumD(diary3);
-   if (d1 > d2 && d1 > d3) { console.log('I need to buy a bicycle for my first son.') };
-   if (d2 > d1 && d2 > d3) { console.log('I need to buy a bicycle for my second son.') };
-   if (d3 > d2 && d3 > d1) { console.log('I need to buy a bicycle for my third son.') };
-   if (d1 = d2) { console.log('I need to buy a bicycle for my second son.') };
-   if (d1 = d3) { console.log('I need to buy a bicycle for my third son.') };
-   if (d1 = d2 = d3) { console.log('I need to buy a bicycle for my third son.') };
-
-
-   console.log(d1);
-   console.log(d2);
-   console.log(d3);
-
-}
-whoseBicycle(diary1, diary2, diary3)
----------------------!!!!!!!!!!!!!!!!!!*/
-
-
-
-
-
-/*-----!!!!!!!!!!
-
-let suspectInfo = { 'James': ['Jacob', 'Bill', 'Lucas'], 'Johnny': ['David', 'Kyle', 'Lucas'], 'Peter': ['Lucy', 'Kyle'] };
-let dead = ['Lucas', 'Bill'];
-
-function killer(suspectInfo, dead) {
-   for (let i = 0; i < suspectInfo[key].length; i++) {
-      dead.map(item => (suspectInfo[key].includes(item)) ? 1 : 0);
-   }
-
-}
-
-
-console.log(killer(suspectInfo, dead))
-----------------!!!!!!!!!!*/
-
-/*
+/*-------------------
+Ваша задача — написать функцию, которая принимает два или более 
+объектов и возвращает новый объект, объединяющий все входные объекты.
 const objA = { a: 10, b: 20, c: 30 }
 const objB = { a: 3, c: 6, d: 3 }
-let resultKey = []
-let resultValue = []
-function combine(...obj) {
-   let a = [...obj]
-   console.log(a)
-   a.forEach(item => {
-      resultKey.push(Object.keys(item))
-      resultValue.push(Object.values(item))
-   })
-   let q = resultKey.concat()
-   let w = resultValue.concat()
+combine(objA, objB) // Returns { a: 13, b: 20, c: 36, d: 3 }
 
-   console.log(q, w)
+
+const objA = { a: 10, b: 20, c: 30 };
+const objB = { a: 3, c: 6, d: 4 };
+const objC = { a: 5, d: 11, e: 8 };
+const objD = { c: 3 };
+
+function combine(...obj) {
+   console.log(obj)
+   let result = {}
+
+   for (var i = 0; i < obj.length; i++) {
+      for (let key in obj[i]) {
+         if (result[key] == undefined) {
+            result[key] = obj[i][key];
+         } else {
+            result[key] = result[key] + obj[i][key];
+         };
+      };
+   };
+   console.log(result)
 }
-combine(objA, objB)
-*/
+
+Codevars
+function combine() {
+   var obj = {}
+
+    for (var i = 0; i < arguments.length; i++) {
+         for (var key in arguments[i]) {
+           obj[key] = obj[key] ? obj[key] + arguments[i][key]: arguments[i][key]
+         }
+   }
+    return obj;
+ }
+
+combine(objA, objB, objC, objD)
+---------------*/
+
+/*----------------
+Вы должны создать функцию spread, которая принимает функцию и список аргументов, 
+которые должны быть применены к этой функции. Вы должны заставить эту функцию возвращать 
+результат вызова данной функции/лямбды с заданными аргументами.
+
+function spread(func, args) {
+  return func.apply(this, args)
+}
+
+---------------*/
+
+
+/*----------------------
+Вам удалось сузить круг подозреваемых до нескольких человек. 
+К счастью, вы знаете всех, кого подозреваемые видели в день убийства.
+Задача.
+Дан словарь со всеми именами подозреваемых и всех, кого они 
+видели в тот день, который может выглядеть так:
+вернуть имя одного убийцы, в нашем случае, 'James'потому что 
+он единственный человек, который видел и то, 'Lucas'и другое.'Bill'
+
+let suspectInfo = { 'Brad': [], 'Megan': ['Ben', 'Kevin'], 'Finn': [] };
+let dead = ['Ben'];
+
+function killer(suspectInfo, dead) {
+   for (let key in suspectInfo) {
+      let a = []
+      let b = []
+      for (let i = 0; i < dead.length; i++) {
+         a = suspectInfo[key].filter(item => item === dead[i])
+         b += a
+      }
+      if (b === dead.join('')) {
+         console.log(key)
+      }
+   }
+}
+killer(suspectInfo, dead)
+
+
+Codewars
+function killer(obj, dead) {
+   for (let i in obj) 
+     if (obj[i].filter(i => dead.includes(i)).length == dead.length) return i
+ }
+-------------------------*/
+
 
