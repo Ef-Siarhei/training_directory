@@ -315,6 +315,32 @@ function vowelOne(s){
  ---------------------------------*/
 
 
+/*----------------------
+Поток данных получен и должен быть реверсирован.
+Каждый сегмент имеет длину 8 бит, что означает, что порядок этих сегментов должен быть обратным
+
+const data = [1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0]
+function dataReverse(data) {
+   let size = 8;
+   let result = [];
+   for (i = 0; i < data.length; i += size) {
+      result.push(data.slice(i, i + size));
+   }
+   return result.reverse().flat()
+}
+console.log(dataReverse(data))
+
+Codewars
+const dataReverse = data => {
+  const bytes = [];
+  for (let i = 0; i < data.length; i += 8) {
+    bytes.unshift(...data.slice(i, i + 8));
+  }
+  return bytes;
+};
+----------------------*/
+
+
 
 
 
@@ -355,7 +381,7 @@ whoseBicycle(diary1, diary2, diary3)
 
 
 
-
+/*-----!!!!!!!!!!
 
 let suspectInfo = { 'James': ['Jacob', 'Bill', 'Lucas'], 'Johnny': ['David', 'Kyle', 'Lucas'], 'Peter': ['Lucy', 'Kyle'] };
 let dead = ['Lucas', 'Bill'];
@@ -369,3 +395,25 @@ function killer(suspectInfo, dead) {
 
 
 console.log(killer(suspectInfo, dead))
+----------------!!!!!!!!!!*/
+
+/*
+const objA = { a: 10, b: 20, c: 30 }
+const objB = { a: 3, c: 6, d: 3 }
+let resultKey = []
+let resultValue = []
+function combine(...obj) {
+   let a = [...obj]
+   console.log(a)
+   a.forEach(item => {
+      resultKey.push(Object.keys(item))
+      resultValue.push(Object.values(item))
+   })
+   let q = resultKey.concat()
+   let w = resultValue.concat()
+
+   console.log(q, w)
+}
+combine(objA, objB)
+*/
+
